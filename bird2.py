@@ -38,15 +38,15 @@ def interpret_head_genotype(genotype, back_phenotype):
     elif genotype == 'b/b':
         head = "黑頭"
     else:
-        head = "未知頭部顏色"
+        head = "黑頭"
 
     # 考慮背部基因的互作
     if back_phenotype == "藍背":
         if head in ["紅頭", "橘頭"]:
             head = "鮭魚色"
-    elif back_phenotype == "黃色背部":
+    elif back_phenotype == "黃背":
         if head == "黑頭":
-            head = "黃色頭部"
+            head = "黃頭"
 
     return head
 
@@ -56,17 +56,17 @@ def interpret_back_genotype(genotype):
     """
     if 'G' in genotype:
         if 'Y' in genotype:
-            return "黃色背部"
+            return "黃背"
         else:
             return "綠背"
     elif 'Y' in genotype:
-        return "黃色背部"
+        return "黃背"
     elif genotype == 'b/b':
         return "藍背"
     elif 'b/Y' in genotype or 'Y/b' in genotype:
         return "天空藍"
     else:
-        return "未知背部顏色"
+        return "綠背"
 
 def interpret_chest_genotype(genotype):
     """
