@@ -199,7 +199,7 @@ def create_gui():
     ttk.Label(male_frame, text="背部顏色:").grid(row=1, column=0, sticky='w')
     male_back_var = tk.StringVar()
     male_back_combo = ttk.Combobox(male_frame, textvariable=male_back_var, values=[
-        "綠背", "黃色背部", "藍背", "天空藍"
+        "綠背", "黃背", "藍背", "天空藍"
     ], state="readonly")
     male_back_combo.grid(row=1, column=1, padx=5, pady=2)
     male_back_combo.current(0)
